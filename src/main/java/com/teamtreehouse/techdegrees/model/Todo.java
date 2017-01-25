@@ -7,7 +7,7 @@ public class Todo {
 
   public Todo(String name) {
     this.name = name;
-    this.completed = completed;
+    this.completed = false;
   }
 
   public int getId() {

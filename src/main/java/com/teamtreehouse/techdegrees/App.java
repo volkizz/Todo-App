@@ -40,7 +40,7 @@ public class App {
       dao.add(todo);
       res.status(201);
       return todo;
-    });
+    }, gson::toJson);
 
     put("/api/v1/todos/:id", "application/json", (req, res) -> {
       Todo todo = dao.findById(Integer.parseInt(req.params("id")));
