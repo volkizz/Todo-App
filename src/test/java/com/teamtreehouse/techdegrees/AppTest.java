@@ -82,6 +82,8 @@ public class AppTest {
     client.request("POST", "/api/v1/todos", gson.toJson(todo));
 
     assertEquals(1, dao.findAll().size());
+    assertEquals("test", dao.findById(1).getName());
+    assertEquals(false, dao.findById(1).isCompleted());
   }
 
   @Test
